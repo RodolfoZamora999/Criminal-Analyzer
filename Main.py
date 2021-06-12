@@ -1,3 +1,4 @@
+from termcolor import colored
 import os
 
 #Ruta de la base de datos.
@@ -7,7 +8,12 @@ file = "database.pl"
 init_query_prolog = "swipl -f {0} -g main -t halt".format(file)
 
 
-# Método de utilidad para imprimir tablas con datos en consola.
+#Método de utilidad para resolver dependencias del proyecto.
+def dependencies_resolution():
+    os.system("pip install termcolor")
+    os.system("clear")
+
+#Método de utilidad para imprimir tablas con datos en consola.
 def print_table(values: iter):
     max = 0
     for value in values:
@@ -15,11 +21,9 @@ def print_table(values: iter):
             max = len(value)
     
     #Imprimir parte superior
-    for i in range(max + 4):
-        print("_", end="", sep="")
+    print( "+" + ("-" * (max + 2)) + "+")
     
     #Imprimir los valores de la tabla
-    print()
     for value in values:
         if len(value) < max:
             diff = max - len(value)
@@ -27,14 +31,12 @@ def print_table(values: iter):
                 value += " "
 
         print("| ", value, " |", sep="")
-
-    #Imprimir parte inferior 
-    for i in range(max + 4):
-        print("_", end="", sep="") 
-    print()
+    
+    #Imprimir parte inferior
+    print( "+" + ("-" * (max + 2)) + "+")
 
 
-# Este método es responsable de cargar los datos a la base de conocimientos
+#Este método es responsable de cargar los datos a la base de conocimientos
 def input_database():
     os.system("clear")
     print("Inserte las características del criminal.")
@@ -74,18 +76,22 @@ def query_criminal():
     print("load")
 
 
-# Método de entrada del programa
+#Método de entrada del programa
 def main():
+    #Se resuelven las dependencias
+    dependencies_resolution()
     os.system("clear")
-    print_table(["#####################################", "Bienvenidos a Criminal Analyzer 1.0", "#####################################"])
-    print("Por favor seleccione una de las siguientes opciones")
-
-    if os.path.exists(file):
-        print("Se ha detectado una base de datos existente")
-
-    print("1.Introducir datos\n2.Hacer una consulta")
+    os.system("color")
+    print_table(["#"*40, "Bienvenidos a Criminal Analyzer 1.0", "#"*40])
     
-    select = input("Insertar: ")
+    if os.path.exists(file):
+        print(colored("Se ha detectado una base de datos existente.\n", "green"))
+    else:
+        print(colored("No se ha detectado una base de datos existente.\n", "red"))
+
+    print("Por favor seleccione una de las siguientes opciones:")
+    print("{0} Introducir datos\n{1} Hacer una consulta\n".format(colored("[1]", "green"), colored("[2]", "green")))
+    select = input("{0} Selecciona una opción: ".format(colored("[-]", "blue")))
     if select == "1":
         input_database()
     elif select == "2":
@@ -96,6 +102,6 @@ def main():
     else:
         print("Por favor seleccione una opción correcta")
 
-
+#Punto de entrada del programa
 if __name__ == "__main__":
     main()
