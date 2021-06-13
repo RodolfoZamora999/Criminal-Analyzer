@@ -3,7 +3,7 @@ import os
 
 #Ruta de la base de datos.
 file = "database.pl"
-temp_query_file.temp
+temp_file = "query_file.temp"
 #Inicia prolog con "data.pl" como base de conocimiento, 
 #ejecuta "main" como objetivo y despues finaliza.
 init_query_prolog = "swipl -f {0} -g main -t halt".format(file)
