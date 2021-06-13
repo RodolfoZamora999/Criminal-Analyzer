@@ -1,5 +1,4 @@
 import os
-from Main import main
 
 #Se resuleven las dependencias del proyecto
 def dependencies_resolution():
@@ -15,4 +14,7 @@ def active_color_terminal():
 if __name__ == "__main__":
     dependencies_resolution()
     active_color_terminal()
+
+    # Init program
+    from Main import main
     main()

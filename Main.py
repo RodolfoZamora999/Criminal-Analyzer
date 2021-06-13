@@ -3,12 +3,14 @@ import os
 
 #Ruta de la base de datos.
 file = "database.pl"
+temp_query_file.temp
 #Inicia prolog con "data.pl" como base de conocimiento, 
 #ejecuta "main" como objetivo y despues finaliza.
 init_query_prolog = "swipl -f {0} -g main -t halt".format(file)
 
 #Método de utilidad para imprimir tablas con datos en consola.
 def print_table(values: iter, numerate: bool = False):
+    #Verificar la cadena con mayor longitud.
     max = 0
     for value in values:
         if len(value) > max:
@@ -69,15 +71,33 @@ def print_table(values: iter, numerate: bool = False):
         print( "+" + ("-" * (max + 2)) + "+")
 
 
-#Este método es responsable de cargar los datos a la base de conocimientos
-def input_data():
+#Método que almacena los datos en un fichero.
+def save_data(values: list):
+    with open(file, mode="w") as file_open:
+        for value in values:
+            tokens = value.split(":")
+            temp = "{0}({1}).\n".format(tokens[0], tokens[1])
+            file_open.write(temp)
+
+        file_open.close()
+        print(colored("\nDatos almacenados con éxito.", "green"))
+        input("\nPresione Enter para continuar...")
+
+        #Regresar al menu de inicio
+        main()
+
+
+#Método responsable de la recopilación de los datos que se almacenaran.
+def input_data(values: list = None):
     os.system("clear")
     print("Inserte las características del criminal.")
     print("Escriba {0} para finalizar la entrada de características.".format(colored("complete", "green")))
     print("{0}: caracteristica{1}valor\n".format(colored("Sintaxis", "yellow"), colored(":", "green")))
 
     #Inicia la carga de datos
-    values = []
+    if values is None:
+        values = []
+
     while True:
         str_input = input("{0} Característica: ".format(colored("[-]", "blue"))).lower().lstrip().rstrip().replace(" ", "_")
         if str_input == "complete" or str_input == "exit":
@@ -92,12 +112,11 @@ def input_data():
                 select = input("{0} Seleccione una opción: ".format(colored("[-]", "blue")))
                 if select == "1":
                     #Almacenar los datos en la base de conocimiento.
-                    print("Datos almacenados")
+                    save_data(values)
                     break
                 elif select == "2":
                     #Seguir con la entrada de datos.
-                    print("Nada")
-                    break
+                    input_data(values)
                 elif select == "3":
                     #Ignora los datos y regresa al inicio.
                     main()
@@ -120,7 +139,6 @@ def query_criminal():
 #Método de entrada del programa
 def main():
     os.system("clear")
-    os.system("color")
     print_table(["#"*40, "Bienvenidos a Criminal Analyzer 0.1", "#"*40])
     
     if os.path.exists(file):
