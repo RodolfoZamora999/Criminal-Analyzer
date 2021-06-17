@@ -1,1 +1,1 @@
-![Alt text])(documentation/Infografia.svg)
+![make coomand line](documentation/Infografia.svg)
