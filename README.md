@@ -1,1 +1,8 @@
-![make coomand line](documentation/Infografia.svg)
+![info](documentation/Infografia.svg)
+
+<br/>
+<br/>
+
+![diagram](documentation/DiagramaFlujo.svg)
+
+
