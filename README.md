@@ -111,7 +111,8 @@ En el segundo apartado tenemos la captura de datos para la creación de la base 
 Nos da una ligera explicación sobre la forma de ingresar los datos y la palabra clave para poder finalizar la captura de información.
 La sintaxis para la ingresar los datos es la siguiente: 
 
-característica:valor
+**<text style="color:#41A0D6">característica</text> : <text style="color:#41D67C">valor**</text>
+
 
 Donde “característica” es la característica que se va almacenar y “valor” representa el valor que le acompaña, por ejemplo, si queremos almacenar la estatura de una persona cuyo valor es de 170 cm lo haríamos de la siguiente manera: estatura:170  
 
@@ -123,4 +124,21 @@ Cuando se escribe la palabra “complete” el programa deja de esperar entrada 
 
 **[3] Cancelar e ignorar datos:** Ignora todos los datos ingresados y regresa al inicio.
 
+<br>
+
+### **Pantalla de consultas**
+
+![info](documentation/capture_3.png)
+
+El tercer apartado nos muestra una interfaz para iniciar con las consultas de las características de un sospechoso, en base a lo capturado en la base de conocimiento (ver apartado anterior) serán las características solicitadas por el sistema. 
+
+Una vez ingresadas dichas características el sistema iniciara con la evaluación de dichos datos, en caso de que el sospechoso cumpla con todas las características el sistema arrojara un mensaje indicando de que se trata del sospechoso, en caso contrario arrojara un mensaje indicando de que no se trata del responsable de dicho crimen. Esta evaluación de características y los mensajes desplegados son realizados por el motor de ejecución de Prolog.
+
+Finalizada la consulta nos aparece las siguientes opciones para poder seguir con el flujo del sistema:
+
+**[1] Realizar otra consulta:** Al seleccionar esta opción el sistema vuelve a cargar este mismo apartado para poder realizar otra consulta. 
+
+**[2] Regresar al menú:** Esta opción nos regresa al inicio del programa.
+
+**[3] Salir del programa:** Esta opción finaliza el programa definitivamente.
 
