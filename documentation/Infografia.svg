@@ -6,7 +6,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
-   sodipodi:docname="diagrama.svg"
+   sodipodi:docname="Infografia.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -31,8 +31,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.50000001"
-     inkscape:cx="247.99999"
-     inkscape:cy="590.99998"
+     inkscape:cx="249"
+     inkscape:cy="590.99999"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -87,15 +87,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-1.3767563)">
-    <rect
-       style="display:inline;fill:#ffffff;stroke-width:1.65136"
-       id="rect833"
-       width="814.28571"
-       height="1110.906"
-       x="0"
-       y="1.3767563"
-       sodipodi:insensitive="true"
-       inkscape:label="content" />
     <rect
        style="opacity:0.999;fill:#e2e4e6;fill-opacity:1;stroke-width:10.4875;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
        id="rect139988"
@@ -2083,7 +2074,7 @@
          sodipodi:role="line"
          id="tspan66271"
          x="363.45288"
-         y="725"></tspan><tspan
+         y="725" /><tspan
          sodipodi:role="line"
          id="tspan66275"
          x="363.45288"
