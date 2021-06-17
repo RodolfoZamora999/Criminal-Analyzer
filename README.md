@@ -1,3 +1,7 @@
+# Criminal Analyzer.
+
+<br>
+
 ## Introducción a la problematica
 
 México es un país que tiene altos indices de criminalidad al año, desde asesinatos,
@@ -42,8 +46,31 @@ sistema
 > Infografía de la dinámica del sistema.
 
 <br>
-<br>
+
+También se adjunta el diagrama de flujo del sistema para tener una idea más concreta del flujo de entrada y salida del sistema. 
 
 ![diagram](documentation/DiagramaFlujo.svg)
 
 > Diagrama de flujo del sistema.
+
+<br>
+<br>
+
+## Lo que es y no es este proyecto
+Posiblemente no quede del todo claro algunos aspectos del proyecto, como por ejemplo el
+objetivo de este, sus alcances, limitaciones y que es lo que se plantea resolver, es por eso
+que he decidido agregar esta sección explicando con más detalle los puntos anteriores. Para
+esto he decidido englobar en dos partes, la primera “Que no es este proyecto” habla sobre
+algunas confusiones o ideas erróneas que piensa las personas sobre el proyecto, la segunda
+parte es “Que es este proyecto” donde se especifica de manera explicita la razón de ser de
+este proyecto.
+
+### Que No es este proyecto:
+* No es un sistema impulsado por inteligencia artificial que permite determinar con exactitud quien es el criminal en base a características ingresadas.
+
+* No es un sistema conectado con una base datos policial que permita determinar quien es un criminal en base a antecedentes penales.
+
+### Que Sí es este proyecto:
+* Es un sistema que recibe una entrada de características recopiladas anteriormente, genera una base de conocimiento, se hace una consulta comparando los valores de dicha consulta con la base de conocimiento y genera una salida en base a los resultados.
+
+* El objetivo principal del proyecto es simplemente agilizar las comparaciones de características recopiladas del supuesto criminal con las características de los sospechosos detenidos, de esta manera obtenemos resultados más rápidos y acertados sobre quien es el presunto autor de dicho crimen. 
