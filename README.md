@@ -104,7 +104,7 @@ Este es el primer apartado que varemos cuando se inicie el programa, nos da un b
 
  ### **Pantalla de captura de datos**
 
-![info](documentation/capture_1.png)
+![info](documentation/capture_2.png)
 
 En el segundo apartado tenemos la captura de datos para la creación de la base de conocimiento. Tiene que haber una base de conocimientos existente para poder realizar consultas, dado a esto el primer apartado que visitaremos al iniciar el programa (después del inicio por supuesto) sera este.
 
@@ -141,4 +141,29 @@ Finalizada la consulta nos aparece las siguientes opciones para poder seguir con
 **[2] Regresar al menú:** Esta opción nos regresa al inicio del programa.
 
 **[3] Salir del programa:** Esta opción finaliza el programa definitivamente.
+
+<br>
+<br>
+
+## **Descripción técnica, requisitos y código.**
+El proyecto esta desarrollado usando dos lenguajes de programación, por un lado tenemos
+**Python** que fue utilizado para desarrollar la interfaz de entrada y salida de los datos, por otra
+parte tenemos a **Prolog** que fue utilizado como motor de resolución de consultas del sistema.
+Se opto por Python debido a su excelente integración con el sistema, en el caso de Prolog su
+uso es obligatorio. No existe una conexión directa entre Python y Prolog en el sistema,
+básicamente se esta utilizando la terminal del sistema como “puente” entre estos dos
+lenguajes, Python unicamente captura los datos del usuario y posteriormente genera un
+archivo con dichos datos, el archivo generado sera la base de datos
+
+Los requisitos del proyecto son los siguientes:
+* Tener Python 3.0+ instalado en el sistema.
+* Tener PIP (el sistema de gestión de paquetes de Python) instalado en el sistema.
+* Tener SWI-Prolog instalado en el sistema.
+* Acceso a Internet, con la finalidad de resolver la dependencias de bibliotecas del
+sistema.
+
+**Importante:** Es necesario (obligatorio) que estos programas se encuentren registrados en
+las variables de entorno del sistema, osea, que puedan ser accedidos desde la terminal con
+tan solo escribir el nombre de dicho programa, en caso contrario se tendrán que registrar
+para que el sistema pueda funcionar correctamente.
 
