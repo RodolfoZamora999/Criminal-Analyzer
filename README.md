@@ -92,6 +92,8 @@ realizar consultas.
 
 ![info](documentation/capture_1.png)
 
+> Captura de pantalla del inicio del sistema.
+
 Este es el primer apartado que varemos cuando se inicie el programa, nos da un bienvenida al sistema y nos muestra 3 opciones que podemos seleccionar. 
 
 **[1] Introducir datos:** Esta opción nos llevara al apartado donde podremos ingresar los datos recopilados de la escena del crimen, cuando no hay una base de datos creada previamente esta opción es la que se tiene que seleccionar primero para poder realizar una consulta. 
@@ -105,6 +107,8 @@ Este es el primer apartado que varemos cuando se inicie el programa, nos da un b
  ### **Pantalla de captura de datos**
 
 ![info](documentation/capture_2.png)
+
+> Captura de pantalla donde se capturan los datos.
 
 En el segundo apartado tenemos la captura de datos para la creación de la base de conocimiento. Tiene que haber una base de conocimientos existente para poder realizar consultas, dado a esto el primer apartado que visitaremos al iniciar el programa (después del inicio por supuesto) sera este.
 
@@ -129,6 +133,8 @@ Cuando se escribe la palabra “complete” el programa deja de esperar entrada 
 ### **Pantalla de consultas**
 
 ![info](documentation/capture_3.png)
+
+> Captura de pantalla donde se hace la consulta de datos.
 
 El tercer apartado nos muestra una interfaz para iniciar con las consultas de las características de un sospechoso, en base a lo capturado en la base de conocimiento (ver apartado anterior) serán las características solicitadas por el sistema. 
 
@@ -167,3 +173,81 @@ las variables de entorno del sistema, osea, que puedan ser accedidos desde la te
 tan solo escribir el nombre de dicho programa, en caso contrario se tendrán que registrar
 para que el sistema pueda funcionar correctamente.
 
+
+<br>
+
+![info](documentation/tools.png)
+
+
+<br>
+
+
+### **Capturas de pantalla de código Prolog generado** 
+
+<br>
+
+![info](documentation/capture_7.png)
+
+> Captura de pantalla de la base de conocimiento generada en base a los datos introducidos.
+
+<br>
+
+![info](docunetation/../documentation/capture_8.png)
+
+> Captura de pantalla donde se muestra un archivo temporal de consulta para Prolog.
+
+<br>
+<br>
+
+## **Ejemplo de uso**
+
+Para entender un poco mejor el funcionamiento del sistema vamos a imaginar que sucede una situación muy hipotética como se muestra a continuación, cabe aclarar que este ejemplo es muy sencillo con fines demostrativos, una situación “real” con llevaría mucha más información involucrada. 
+
+<br>
+
+Imaginemos la siguiente situación: 
+
+Ha ocurrido un asesinato en Tijuana (que novedad), al parecer el crimen fue efectuado con un arma de fuego. Nuestro equipo de investigadores se dirigió hasta la escena del crimen y logro recopilar distintos datos que nos pueden conducir con el responsable de dicho asesinato. Los datos fueron recopilados de distintas fuentes, algunos fueron en base a descripciones por parte de testigos, se logro acceder a una cámara cercana a la escena del rimen y ademas se encontraron indicios en dicha escena.
+
+Los investigadores obtuvieron los siguientes datos:
+
+<br>
+
+![info](documentation/data.png)
+
+> Recopilación de datos hipotéticos.
+
+<br>
+
+Una vez recogidos los datos se prosigue a ingresarlos al sistema como se muestra a continuación: 
+
+![info](documentation/capture_4.png)
+
+> Captura de pantalla donde se muestra la captura de los datos obtenidos anteriormente.
+
+
+<br>
+
+Se prosigue con un operativo donde se detuvieron a dos sospechosos, estos sospechosos fueron trasladados al departamento de investigación policial para ser analizados y determinar quien es el responsable de dicho crimen. En base a las características de los sospechosos se obtuvieron los siguientes resultados:
+
+<br>
+
+### **Sospechoso #1**
+
+![info](documentation/capture_5.png)
+
+> Consulta de datos en base a los datos del sospechoso #1.
+
+<br>
+
+### **Sospechoso #2**
+
+![info](documentation/capture_6.png)
+
+> Consulta de datos en base a los datos del sospechoso #2.
+
+<br>
+
+**Conclusión del caso:** Se ha resuelto satisfactoriamente, ahora el criminal pagara por sus actos. 
+
+Pareciera que no tiene mucha utilidad este sistema, pero ahora imagina una situación donde se tienen decenas de características recopiladas y varios sospechosos detenidos ¡Aquí es donde la cosa cambia!  La idea de este sistema es agilizar las consultas recopiladas desde el inicio, de esta manera las comparaciones no se estarían haciendo de manera manual y ademas el margen de error estaría disminuyendo en dichas comparaciones. 
